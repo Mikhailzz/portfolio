@@ -1,0 +1,841 @@
+@font-face {
+  font-family: "OpenSans";
+  src: url("https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+
+}
+
+@font-face {
+  font-family: "OpenSans";
+  src: url("https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+
+}
+
+* {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* обнуление */
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+
+a {
+  text-decoration:none; 
+  
+}
+
+ul {
+  list-style-type: none;
+}
+
+
+
+/* ********************** стартовый контейнер шапка элемент ХЕАДЭР */
+
+.start-conteyner {
+  position: relative; 
+  min-height: 450px;
+  background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/banner-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+/* маска хеадера */
+
+.start-conteyner::after {
+  content: "";
+  background-color: rgb(0, 0, 0);
+  opacity: 0.6;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  min-height: 450px;
+  z-index: 304;
+}
+
+/* стартовый флекс контейнер, где содержатся надписи хеадера, логотип и навигация */
+
+.head-char {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0px 15px 0px; 
+  box-sizing: border-box;
+}
+
+/* навигация */
+
+.main-navig {
+  display: flex;
+  text-transform: uppercase;
+
+}
+
+/* элемент навигации */
+
+.list {
+  list-style-type: none;
+  margin-left: 38px;
+  margin-top: 35px;
+}  
+
+/* ссылка навигации */
+
+.li-chaild {
+  font-size: 12.4px;
+  font-family: OpenSans, Arial, sans-serif;
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  line-height: normal;
+  text-align: center;
+  text-decoration: none;
+  z-index: 320;
+
+}
+
+.li-chaild:hover {
+  font-size: 12.4px;
+  font-family: OpenSans, Arial, sans-serif;
+  color: rgb(255, 255, 255);
+  text-decoration: underline;
+  text-transform: uppercase;
+  text-align: center;
+  z-index: 315;
+
+}
+
+/* навигация */
+
+.nav {
+  margin-top: 15px;
+  z-index: 320;
+}
+
+/* картинка лого */
+
+.image {
+  width: 188px;
+  height: 45px;
+  z-index: 440;
+  margin-top: 30px;
+}
+
+/* главный заголовок, находящийся в хеадере, идёт после блока "лого и навигация" */
+
+.intro {
+  position: relative;
+  margin: auto;
+  margin-top: 100px;
+  font-size: 42.7px;
+  font-family: OpenSans, Arial, sans-serif;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 75px;
+  text-align: center;
+  z-index: 308; 
+  width: 682px; 
+  
+}
+
+/* для удаления текста */
+
+.delete-text {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+
+
+/* ***************** средний флекс контейнер с флекс элементами */
+
+.middl-flex {
+  margin: 65px auto 0px;
+  width: 1200px;
+  padding: 0px 15px 0px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* ******* элемент маин статьи левый блок */
+
+.post-list {
+  width: 794px;
+  margin-top: 0;
+  padding-top: 0;
+  
+}
+
+/* контейнер с постами включает в себя посты */
+
+.posts {
+  box-sizing: border-box;
+  width: 794px;
+
+}
+
+/* котейнер пота вкдючает картинку и текстовый блок */
+
+.post {
+  display: flex;
+  width: 794px;
+  justify-content: space-between;
+  padding-bottom: 0;
+  margin-bottom: 0;
+   
+}
+
+/* картинка поста */
+
+.image-post {
+  height: 294px;
+  width: 382px;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+/* псевдоклассы кнтейнера поста */
+
+.post:nth-child(n+2) {
+   margin-top: 57px; 
+}
+
+.post:nth-child(7) {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+/* текстовый блок поста правая часть контейнера поста */
+
+.text-post {
+  width: 372px;
+  padding-bottom: 0;
+  margin-bottom: 0;
+
+}
+
+/* заголовок статьи её начало элемент */
+
+.head-text {
+  display: block;
+  font-size: 20.5px;
+  font-family: OpenSans, Arial, sans-serif;
+  color: rgb(15, 13, 14);
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.2;
+  text-align: left;
+  z-index: 160;
+  margin-top: 12px;
+
+}
+
+.head-text:hover {
+  font-size: 20.5px;
+  font-family: OpenSans, Arial, sans-serif;
+  color: rgb(181, 159, 91);
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.2;
+  text-align: left;
+  z-index: 159;
+
+
+}
+
+
+/* текст поста элемент р текстовая составляющая */
+
+.text { 
+  font-size: 15.3px;
+  font-family: OpenSans, Arial, sans-serif;
+  font-weight: normal;
+  color: rgb(15, 13, 14);
+  line-height: 1.467; 
+  width: 375px;
+  margin-top: 45px;
+  text-align: left;
+  margin-bottom: 0;
+}
+
+/* ещё один блок текста для траетьей статьи элемент р */
+
+.another-text {
+  margin-top: 7px;
+} 
+
+/* контейнер, который включает дату и автора */
+
+ .data-and-autor {
+  display: flex;
+  margin-top: 19px;
+
+} 
+
+/* автор в статье */
+
+.autor {
+  margin-left: 13px;
+  font-size: 12.3px;
+  font-family: OpenSans, Arial, sans-serif;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  text-align: left;
+
+}
+
+/* дата в статье */
+
+.data {
+  
+  font-size: 12.3px;
+  font-family: OpenSans, Arial, sans-serif;
+  color: rgb(136, 136, 136);
+  text-align: left;
+ 
+}
+
+/* теги элемент li*/
+
+.tags {
+  display: inline;
+}
+
+
+/* тег статьи элемент а ссылка */
+
+.tag {
+  font-size: 15px;
+  font-family: OpenSans, Arial, sans-serif;
+  color: rgb(181, 159, 91);
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: left; 
+  
+}
+
+.tag:hover {
+  font-size: 15px;
+  font-family: OpenSans, Arial, sans-serif;
+  color: rgb(181, 159, 91);
+  font-weight: bold;
+  text-decoration: underline;
+  text-transform: uppercase;
+  text-align: left;
+  
+}
+
+/* следующий тег после первого */
+
+.tag-two {
+  margin-left:18px;
+  
+}
+
+/* ************** правый контейнер, наполненный контентом элемент эсайд */
+
+
+.side-bar-conteyner {
+  width: 270px;
+}
+
+/* ************** правый верхний контейнер родитель для "новых постов" и формы поиска элемент секшион первый*/
+
+.side-bar-post {
+  width: 270px;
+
+}
+
+/* заголовок для новых статей и всего контейта, котента правого блока h2 */
+
+.new-post-head {
+  font-size: 14px;
+  font-family: OpenSans, Arial, sans-serif;
+  color: rgb(15, 13, 14);
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 0px;
+
+}
+
+/* чётрочка под заголовком */
+
+.new-post-head::after {
+  content: "";
+  display: block;
+  margin: 12px auto 0px;
+  width: 64px;
+  height: 3px;
+  background-color: rgb(181, 159, 91);
+  opacity: 0.4;
+  z-index: 404;
+  
+}
+
+/* контейнер для новых постов "новых статей" */
+
+.new-post {
+  display: flex;
+  width: 270px;
+  margin-top: 23px;
+  justify-content: space-between;
+}
+
+
+/* картинка для новых постов */
+
+.image-new-post {  
+  width: 72px;
+  height: 72px;
+}
+
+/* контейнер для текстого блока новых постов */
+
+.new-post-text {
+  margin-top: -5px;
+  width: 180px;
+
+}
+
+/* дата нового поста */
+
+.new-data {
+  
+  font-size: 12px;
+  font-family: OpenSans, Arial, sans-serif;
+  color: rgba(0, 0, 0, 0.541);
+  text-align: left;
+ 
+}
+
+/* заголовок нового поста */
+
+.new-text {
+  
+  font-size: 13.8px;
+  font-family: OpenSans, Arial, sans-serif;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.286;  
+  text-align: left; 
+}
+
+.new-text:hover {
+  font-size: 13.8px;
+  font-family: OpenSans, Arial, sans-serif;
+  color: rgb(181, 159, 91);
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.286;
+  text-align: left;
+}
+
+
+/* контейнер, в котором заголовок нового поста, чтобы задать отступ */
+
+.level-text {
+  margin-top: 2px;
+}
+
+/* модификатор для первого нового поста */
+
+.level-look-first {
+  margin-top: 9px;
+}
+
+/* форма поиска главный контейнер элемент "форм" первая форма */
+
+.search {
+  display: flex;
+  height: 42px;
+  width: 270px;
+  margin-top: 50px;
+  
+}
+
+/* инпут формы поле ввода элемент "инпут" */
+
+.search-input {
+  height: 42px;
+  width: 228px;
+  font-size: 15px;
+  font-family: OpenSans, Arial, sans-serif;
+  color: rgba(0, 0, 0, 0.541);
+  text-align: left;
+  background-color: rgb(244, 247, 246);
+  border-style: none;
+}
+
+.search-input:focus {
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(181, 159, 91);
+  background-color: rgb(244, 247, 246);
+  height: 42px;
+  width: 228px;
+  outline: none;
+
+}
+
+.search-input::placeholder {
+  position: absolute; 
+  top: 10px;
+  left: 20px;
+} 
+
+/* кнопка для формы поиска элемент боттон */
+
+.button {
+  background-color: rgb(181, 159, 91);
+  background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/search.svg");
+  width: 42px;
+  height: 42px;
+  background-size: 16px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-style: none;
+
+}
+
+.button:hover {
+  background-color: rgb(50, 50, 50);
+  width: 42px;
+  height: 42px;
+}
+
+/* **************** нижняя правая часть элемент "секшион" второй котейнер в эсайде*/
+
+.side-bar-low-conteyner {
+  width: 270px;
+  margin-top: 58px;
+}
+
+/* форма отправки емейла элемент "форм" вторая форма */
+
+.subcride {
+  display:flex;
+  flex-wrap: wrap;
+  width: 270px;
+  height: 120px;
+  align-items: flex-start;
+  margin-top: 31px;  
+}
+
+/* инпут емейл его стилизация */
+
+.email {
+  font-size: 14px;
+  font-family: OpenSans, Arial, sans-serif;
+  color: rgba(0, 0, 0, 0.541);
+  background-color: rgb(244, 247, 246);
+  text-align: left;
+  width: 270px;
+  height: 42px;
+  border-style: none;
+}
+
+.email::placeholder {
+  position: absolute;
+  left: 20px;
+  top: 12px;
+}
+
+.email:focus {
+  outline: none;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(181, 159, 91);
+  background-color: rgb(244, 247, 246);
+
+}
+
+/* кнопка отправки для емейла */
+
+.button-email {
+  width: 270px;
+  height: 42px;
+  margin-top: 0;
+  border-style: none;
+  background-color: rgb(181, 159, 91);  
+  font-size: 13.5px;
+  font-family: OpenSans, Arial, sans-serif;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.button-email:hover {
+  background-color: rgb(50, 50, 50);
+}
+
+/* начало тегов модификатор заголовка для блока тегов */
+
+.tag-head {
+  margin-top: 30px;
+}
+
+/* список тегов его блок элемент ul */
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin-top: 27px;
+  margin-left: 0;
+  padding-left:0;
+  width: 270px;
+  text-align: left;
+
+}
+
+/* сам тег элемент li в списке */
+
+.tag-item {
+  border-style: solid;
+  border-width: 3px;
+  border-color: rgb(238, 238, 238);
+  background-color: rgba(244, 243, 241, 0);
+  text-align: center; 
+  margin-left: 6px;
+  margin-top: 6px;
+}
+
+.tag-item:hover {
+  font-size: 13px;
+  font-family: OpenSans, Arial, sans-serif;
+  color: rgb(15, 13, 14);
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+/* стилизация ссылки элемент "а" в тегах */
+
+.li {
+  font-size: 13.5px;
+  font-family: OpenSans, Arial, sans-serif;
+  color: rgb(15, 13, 14);
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 2;
+  text-align: left;
+}
+
+/* стилизайия каждого тега, задание им рамки */
+
+.fasion {
+  width: 82px;
+  height: 32px;
+  margin-left: 0;
+  margin-top: 0;
+  box-sizing:border-box;
+    
+}
+
+.music {
+  margin-top: 0;
+  width: 76px;
+  height: 32px;
+  box-sizing:border-box;
+}
+
+.lifestyle {
+  margin-top: 0;
+  width: 92px;
+  height: 32px;
+  box-sizing:border-box;
+}
+
+.art {
+  margin-left: 0;
+  width: 57px;
+  height: 32px;
+  box-sizing:border-box;
+}
+
+.interior {
+  width: 85px;
+  height: 32px;
+  box-sizing:border-box;
+}
+
+.travel {
+  width: 78px;
+  height: 32px;
+  box-sizing:border-box;
+}
+
+.food {
+  width: 66px;
+  height: 32px;
+  margin-left: 0;
+  box-sizing:border-box;
+}
+
+.health {
+  width: 76px;
+  height: 32px;
+  box-sizing:border-box;
+}
+
+/* темы начало модификатор заголовка темы */
+
+.team-head {
+  margin-top: 50px;
+}
+
+/* список тем элемент "ul" */
+
+.team-list {
+  padding-left: 0;
+  margin-top: 8px;
+}
+
+/* отдельно взятий элемент списка тем */
+
+.team-item {
+  width: 270px;
+  height: 45px;
+  border-bottom: 1px solid; 
+  border-bottom-color: rgb(238, 238, 238); 
+}
+
+/* стилизайия самого элемента "тема" элемент "а" */
+
+.item-text-team {
+  font-size: 15px;
+  font-family: OpenSans, Arial, sans-serif;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  line-height: 3; 
+  text-align: left;
+}
+
+.item-text-team:hover {
+  font-size: 15px;
+  font-family: OpenSans, Arial, sans-serif;
+  color: rgb(181, 159, 91);
+  font-weight: bold;
+  line-height: 3;
+  text-align: left;
+}
+
+/* стилизация верхнего индекса элемент "спан" внутри ссылки */
+
+.sup {
+  font-size: 12px;
+  font-family: OpenSans, Arial, sans-serif;
+  font-weight: bold;
+  line-height: 3.068;
+  margin-left: 2px;
+  text-align: left;
+  vertical-align: top;
+  color: rgb(181, 159, 91);
+}
+
+/* *************** контейнер "эдрес", где располагается список социалок*/
+
+.list-of-social {
+  width: 1170px;
+  height: 85px;
+  margin: 60px auto 0;
+  background-color: rgb(244, 247, 246);
+}
+
+/* список социалок элемент "ul" */
+
+.socials {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  padding: 26px 0 26px;
+
+}
+
+/* общий класс для социалок стилизация ссылок элемент "а" */
+
+.social-link {
+  display: block;
+  z-index: 200;
+  width: 33px;
+  height: 33px;
+  background-repeat: no-repeat;
+  background-size: 23px;
+  background-position: center;
+  background-color: rgb(244, 247, 246);
+}
+
+/* картинка для каждой ссылки социалки */
+
+.social-link-first {
+  background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/social/001-dribbble.svg");
+}
+
+.social-link-second {
+   margin-left: 19px; 
+  background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/social/002-pinterest.svg");
+}
+
+.social-link-third {
+  margin-left: 19px; 
+  background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/social/003-tumblr.svg");
+}
+
+/* *********** контейнер для нижней подписи копирайта */
+
+.copy-item {
+  display: block;
+  min-height: 16px;
+  width: 367px;
+  text-align: center;
+  margin: 55px auto 30px;
+}
+
+/* стилизация подписи самой нижней копирайта */
+
+.cr-link {
+  font-size: 13.455px;
+  font-family: OpenSans, Arial, sans-serif;
+  color: rgb(153, 153, 153);
+  font-weight: bold;
+}
+
